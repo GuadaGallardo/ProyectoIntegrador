@@ -1,0 +1,38 @@
+.row{
+    padding: 20px;
+}
+div{
+    background-color: #9265ad;
+    text-align: center;
+}
+
+/*estilo de la foto*/
+/*a partir de xxx cantidad de pixeles, vas a modificar la foto de tal manera*/
+@media (min-width: 576px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 3%;
+        top: 525px;
+    }
+}
+
+/*a menos de xxx cantidad de pixeles, vas a modificar la foto de tal manera*/
+@media (max-width: 575px){
+    #fotodeperfil{
+        position: absolute;
+        width: 40%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 30%;
+        top: 450px;
+    }
+}
+
+/*estilo del nombre*/
+#nombre{
+    font-weight: bold;
+    margin-top: 10%;
+}

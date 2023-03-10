@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// Import ng-circle-progress
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +10,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
 import { SocialComponent } from './components/social/social.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { HardSoftComponent } from './components/hard-soft/hard-soft.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +21,31 @@ import { BannerComponent } from './components/banner/banner.component';
     HeaderComponent,
     LogoAPComponent,
     SocialComponent,
-    BannerComponent
+    BannerComponent,
+    AcercaDeComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    HardSoftComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+     // Specify ng-circle-progress as an import
+     NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius:100,
+      showImage:true,
+      imageHeight:90,
+      imageWidth:90,
+      showUnits:false,
+      showSubtitle:false,
+      outerStrokeWidth:16,
+      innerStrokeWidth:8,
+      outerStrokeColor:"#78C000",
+      innerStrokeColor:"#C7E596",
+      animation:true,
+      animationDuration:600,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
